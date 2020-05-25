@@ -1,10 +1,10 @@
-import React from 'react';import img from './components/rainy.svg';
+import React from 'react'; 
  class Titles extends React.Component {
   render()
   {return (
     <div  >
       <h1> WEATHER FINDER </h1>
-       <img src={img}/>
+      
     </div>
   );
 }
