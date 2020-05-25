@@ -2,7 +2,7 @@ import React from 'react';
  import './App.css'
 import Title from "./components/Title"; 
 import  Form from "./components/Form"; 
-import img from './components/rainy.svg';
+
 import  Weather from "./components/Weather"
 class App extends React.Component
  {
@@ -67,10 +67,8 @@ else {
              <div className="row">
                  <div className="col-sm-6 title-container">
                    <Title/>
-                  <img src={img}/>
+                 
                  </div> 
-
-
                <div className="col-sm-6 form-contaier">
                    <Form 
                    getWeather ={this.getWeather} />
@@ -84,7 +82,6 @@ else {
                    />
                 </div>
              </div>
-        
  </div>
   );
 }

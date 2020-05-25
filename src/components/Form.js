@@ -5,7 +5,7 @@ import React from 'react';
   render()
   {return (
     <div  >
-      <h1> ONINE WEATHER APP</h1>
+      <h1> ONLINE WEATHER APP</h1>
        <form onSubmit={this.props.getWeather}>
       <div className="inputs">
              <div> <table>
