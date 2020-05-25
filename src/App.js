@@ -21,8 +21,6 @@ getWeather = async (e) =>
    
    if (city)
    {
-
-   
   const api_call = await fetch(` http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=02dc29532eb41005786c62a639b38764`);
   const data = await api_call.json();
   console.log(data);
@@ -37,14 +35,14 @@ getWeather = async (e) =>
       error: ""
     });
   } else
-   {
+   {if(data.message="city not found")
     this.setState({
       temperature: undefined,
       city: undefined,
       country: undefined,
       humidity: undefined,
       description: undefined,
-      error: "Please enter the values."
+      error: "Please enter the valid city name."
     });
   }
 }
