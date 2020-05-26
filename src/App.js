@@ -27,7 +27,7 @@ getWeather = async (e) =>
   if (!(data.cod==="404")) 
   {
     this.setState({
-      temperature: data.main.temp,
+      temperature: parseFloat(data.main.temp-273).toFixed(2),
       city: data.name,
       country: data.sys.country,
       humidity: data.main.humidity,
