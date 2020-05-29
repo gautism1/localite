@@ -12,7 +12,7 @@ import React from 'react';
          <label>  {this.props.city && this.props.country && <p>Location  {this.props.city},{this.props.country}</p>}</label>
 
 
-        <label>{this.props.humidity &&  <p>Humidity {this.props.humidity}</p>}  </label>
+        <label>{this.props.humidity &&  <p>Humidity {this.props.humidity}</p>}</label>
 
         <label>  {this.props.description && <p>Description: {this.props.description}</p>}</label>
          <label className="error"> {this.props.error  &&  <p>Error:  {this.props.error}</p>}</label>
