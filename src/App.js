@@ -4,6 +4,8 @@ import Title from "./components/Title";
 import  Form from "./components/Form"; 
 import img from './components/rainy.svg';
 import  Weather from "./components/Weather"
+import  Navbar from "./components/navbar"
+
 class App extends React.Component
  {
      state={
@@ -14,11 +16,11 @@ class App extends React.Component
      description:undefined,
      error:undefined
    } 
+
 getWeather = async (e) =>
 {
   e.preventDefault();
   const city = e.target.elements.city.value;
-   
    if (city)
    {
   const api_call = await fetch(` http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=02dc29532eb41005786c62a639b38764`);
@@ -60,13 +62,15 @@ else {
 }
   render()
   {return (
+    <>
+     <Navbar/>
     <div className="App">
-             <div className="row">
-                 <div className="col-sm-6 ">
-                   <Title/>
-                  <img src={img}/>
+                
+                 <div className="">                 
+                    <Title/>
+                    <img src={img}/>
                  </div>
-               <div className="col-sm-6 ">
+                 <div className="">
                    <Form 
                    getWeather ={this.getWeather} />
                    <Weather 
@@ -78,9 +82,9 @@ else {
                    error={this.state.error} 
                    />
                 </div>
-             </div>
-        
+          
  </div>
+ </>
   );
 }
 } 
